@@ -1,3 +1,16 @@
+# Virtual environment
 venv/
 
-./pytest_cache
+# Python cache files
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Distribution/packaging
+dist/
+build/
+*.egg-info/
+
+# IDE specific files
+.vscode/
+.idea/
