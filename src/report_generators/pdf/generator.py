@@ -5,8 +5,8 @@ from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.platypus import Table, SimpleDocTemplate, TableStyle, Paragraph
 
-from src.report_generators.base_generator import BaseGenerator
-from src.report_generators.utils import format_column_text
+from ..base_generator import BaseGenerator
+from ..utils import format_column_text
 
 
 class BasePDFReportsGenerator:
