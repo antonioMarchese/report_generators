@@ -1,6 +1,6 @@
 [project]
 name = "report_generators"
-version = "0.1.3"
+version = "0.1.4"
 description = "A python package for reports generation."
 authors = [
     {name = "Antônio Marchese", email = "devmarcheseantonio@gmail.com"}
@@ -23,3 +23,6 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"report_generators.pdf" = ["*.ttf"]
