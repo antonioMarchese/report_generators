@@ -30,14 +30,15 @@ class BaseXLSXReportsGenerator:
             cell.value = cell_value
 
     def generate(
-            self, items: List[Any], header_columns: Optional[COLUMNS_TYPE] = None
+            self, items: List[Any], header_columns: Optional[COLUMNS_TYPE] = None,
+            save_file_path: Optional[str] = None
     ) -> Workbook:
         row_num: int = 1
 
         # Add optional header columns first
         if header_columns is not None:
             self.assign_cell_titles(columns=header_columns)
-            row_num += 1
+            row_num += 2  # Leave a blank row after headers
 
         # Add main columns
         columns: List[COLUMNS_TYPE] = self.base_generator.get_columns()
@@ -50,5 +51,8 @@ class BaseXLSXReportsGenerator:
                 row=self.base_generator.generate_row_fn(item), row_num=row_num
             )
             row_num += 1
+
+        if save_file_path is not None:
+            self.workbook.save(save_file_path)
 
         return self.workbook

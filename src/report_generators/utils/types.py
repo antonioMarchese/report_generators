@@ -1,4 +1,4 @@
-from typing import List, Tuple
+from typing import Tuple
 
 
-COLUMNS_TYPE = List[Tuple[str, int]]
+COLUMNS_TYPE = Tuple[str, int]
