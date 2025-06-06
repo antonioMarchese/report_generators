@@ -2,8 +2,7 @@ from typing import List, Any, Optional
 from openpyxl.workbook import Workbook
 from openpyxl.utils import get_column_letter
 
-from src.report_generators.base_generator import BaseGenerator
-from src.report_generators.base_generator import COLUMNS_TYPE
+from ..base_generator import BaseGenerator, COLUMNS_TYPE
 
 
 class BaseXLSXReportsGenerator:

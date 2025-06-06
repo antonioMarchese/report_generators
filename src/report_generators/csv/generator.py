@@ -1,10 +1,9 @@
 from io import StringIO
 from typing import List, Any, Optional
 
-from src.report_generators.base_generator import BaseGenerator
-from src.report_generators.utils import COLUMNS_TYPE
-from src.report_generators.utils.workbook_to_csv import workbook_to_csv_buffer
-from src.report_generators.xlsx.generator import BaseXLSXReportsGenerator
+from ..base_generator import BaseGenerator
+from ..utils import COLUMNS_TYPE, workbook_to_csv_buffer
+from ..xlsx.generator import BaseXLSXReportsGenerator
 
 
 class BaseCSVReportsGenerator(BaseXLSXReportsGenerator):

@@ -3,7 +3,7 @@ from typing import List
 from abc import ABC, abstractmethod
 from typing import Tuple, List, Any
 
-COLUMNS_TYPE = List[Tuple[str, int]]
+COLUMNS_TYPE = Tuple[str, int]
 
 
 class BaseGenerator(ABC):
