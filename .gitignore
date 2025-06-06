@@ -2,9 +2,15 @@
 venv/
 
 # Python cache files
-__pycache__/
-*.pyc
-.pytest_cache/
+**/__pycache__/
+**/*.py[cod]
+**/*.so
+**/*.egg
+**/*.egg-info
+**/.eggs
+**/.pytest_cache
+.coverage
+htmlcov/
 
 # Distribution/packaging
 dist/
