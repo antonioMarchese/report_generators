@@ -62,8 +62,10 @@ def test_xlsx_generator_with_header_columns(base_generator, mock_data):
 
     # Check header row
     header_row = [cell.value for cell in worksheet[1]]
-    assert header_row[0:2] == ["Header 1", "Header 2"]
-
-    # Check that main data starts after headers
-    data_row = [cell.value for cell in worksheet[3]]  # Row 3 due to header
+    assert header_row[0:2] == ["Header 1", "Header 2"]        # Check column headers (row 3)
+    column_headers = [cell.value for cell in worksheet[3]]
+    assert column_headers[0:3] == ["Name", "Age", "Email"]
+    
+    # Check data (row 4)
+    data_row = [cell.value for cell in worksheet[4]]
     assert data_row[0:3] == ["John Doe", 30, "john@example.com"]

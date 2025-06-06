@@ -1,9 +1,8 @@
 from typing import List
 
 from abc import ABC, abstractmethod
-from typing import Tuple, List, Any
-
-COLUMNS_TYPE = Tuple[str, int]
+from typing import List, Any
+from .utils import COLUMNS_TYPE
 
 
 class BaseGenerator(ABC):
